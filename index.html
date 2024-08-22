@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="dist/theme/serif.css" id="theme">
 
     <!-- Custom Styles -->
-    <style>
-		body {
+    <style>       
+        body {
 			margin: 0;
 			padding: 0;
 			overflow: hidden; /* Prevent scrolling */
@@ -32,6 +32,19 @@
         .title-slide p {
             font-size: 3vw; /* Responsive font size for subtext */
         }
+
+        /* Hide horizontal controls (left and right arrows) */
+        .reveal .navigate-left,
+        .reveal .navigate-right {
+            display: none;
+        }
+
+        /* Optionally, you can adjust the position of the vertical controls */
+        .reveal .navigate-up,
+        .reveal .navigate-down {
+            right: 30px; 
+        }
+
     </style>
 </head>
 
@@ -49,32 +62,45 @@
             <!-- The PPDS Overview -->
             <section>
                 <h2>The PPDS</h2>
-                <p>The PPDS is a powerful tool that enhances the use of public procurement data in Europe.</p>
+                <section>
+                    <h3>The PPDS is a powerful tool that enhances the use of public procurement data in Europe.</h3>
+                </section>
             </section>
 
-            <!-- The PPDS in Figures -->
+            <!-- The PPDS in a snapshot -->
             <section>
-                <h2>The PPDS in Figures</h2>
-                <ul>
-                    <li>Volume of data processed</li>
-                    <li>Number of services</li>
-                    <li>FAIR principles compliant</li>
-                </ul>
+                <h2>The PPDS in a snapshot</h2>
+                <section>
+                    <h3>More than 1 half a million procurement notices per year</h3>
+                </section>
+                <section>
+                    <h3>Capacity to transform 70,000 files in any data model to eProcurement Ontology (ePO)</h3>
+                </section>
+                <section>
+                    <h3>More than 20 microservices deployed to handle the end-to-end data management</h3>
+                </section>
+                <section>
+                    <h3>Several data serving tools, from dashboarding to SPARQL querying</h3>
+                </section>
+                <section>
+                    <h3>FAIR principles compliant</h3>
+                </section>
             </section>
-
             <!-- Live Demo Overview -->
             <section>
                 <h2>Live Demo of the PPDS Analytics Toolkit</h2>
-                <ul>
-                    <li>Monitoring of Public Procurement market</li>
-                    <li>Strategic Procurement measurement</li>
-                </ul>
+                <section>
+                    <h3>Monitoring of Public Procurement market</h3>
+                </section>
+                <section>
+                    <h3>Strategic Procurement measurement</h3>
+                </section>
             </section>
             
             <!-- Actual Demo - Indicator -->
-			<section data-background-iframe="https://api.public-procurement-data-space.europa.eu:8888/superset/dashboard/p/mknYAVzZrg2/"
-				data-background-interactive>
-			</section>
+            <section data-background-iframe="https://api.public-procurement-data-space.europa.eu:8888/superset/dashboard/p/mknYAVzZrg2/"
+                data-background-interactive>
+            </section>
 
             <!-- Actual Demo - Strategic Procurement -->
 			<section data-background-iframe="https://api.public-procurement-data-space.europa.eu:8888/superset/dashboard/p/EO7B1wzZMqk/"
@@ -84,18 +110,27 @@
             <!-- PPDS Speed Tour -->
             <section>
                 <h2>PPDS – A Speed Tour</h2>
-                <p>A tour of different parts of the PPDS: SPARQL dashboards, policy tools, graph exploration, and natural language questions.</p>
-                </ul>
+                
+                <section>
+                    <h3>A tour of different parts of the PPDS: SPARQL dashboards, policy tools, graph exploration, and natural language questions.</h3>
+                    <!-- Indicator for Vertical Slides -->
+                </section>
+                
+                <section>
+                    <img src="images/SPARQL_tool.gif" alt="SPARQL Tool Demo" style="max-width: 70%; height: auto;">
+                </section>
+            
             </section>
 
             <!-- Conclusion -->
             <section>
-                <h2>Conclusion</h2>
-                <p>Future vision and wrap-up of the PPDS initiative.</p>
-                <p><strong>Future:</strong></p>
-                <ul>
-                    <li>Use of AI for better search and analysis of procurement, including tender documents</li>
-                    <li>More features to support procurement processes by advising on best practices and benchmarking</li>
+                <h2>Future of the PPDS</h2>
+                <section>
+                    <h3>Use of AI for better search and analysis of procurement, including tender documents</h3>
+                </section>
+                <section>
+                    <h3>More features to support procurement processes by advising on best practices and benchmarking</h3>
+                </section>
             </section>
         </div>
     </div>
@@ -108,17 +143,17 @@
     <script src="plugin/highlight/highlight.js"></script>
     <script>
 		Reveal.initialize({
-			controls: false,
+			preloadIframes: true,
+            controls: true,
 			progress: false,
 			center: true,
 			hash: true,
 			width: '100%',
 			height: '100%',
-			margin: 0.1,  // Adjust the margin to create more space
-			minScale: 0.5, // This reduces the overall scale of the content
+			margin: 0.1,  
+			minScale: 0.5, 
 			maxScale: 1.2,
 			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
-			preloadIframes: true, // Preload iframes when within viewDistance
 		});
     </script>
 
